@@ -1,10 +1,3 @@
-Perfecto 💯 Aquí tienes el **README completo** actualizado — incluye:
-
-* El bloque del **prompt real y completo**
-* El **link al PDF** que subiste
-* Todo formateado con estilo profesional y uniforme
-
-Puedes copiarlo **tal cual** y pegarlo en tu archivo `README.md` del repositorio 👇
 
 ---
 
