@@ -1,19 +1,12 @@
-Perfecto 👏 vamos a crear un **README completo, profesional y didáctico**, ideal para mostrar en tu perfil o compartir el repo con otros QA.
+Perfecto 💯 Aquí tienes el **README completo** actualizado — incluye:
 
-El formato incluye:
+* El bloque del **prompt real y completo**
+* El **link al PDF** que subiste
+* Todo formateado con estilo profesional y uniforme
 
-* Título y badges
-* Descripción corta
-* Captura general del proyecto
-* Instalación
-* Ejecución
-* Estructura del proyecto
-* Prompt de Comet
-* Licencia y versión
+Puedes copiarlo **tal cual** y pegarlo en tu archivo `README.md` del repositorio 👇
 
 ---
-
-## 🧾 README.md
 
 ````markdown
 # 🤖 Playwright + Cucumber (Gherkin) + POM – Automation Exercise v1.0.0
@@ -25,6 +18,8 @@ El formato incluye:
 
 Proyecto de **automatización end-to-end (E2E)** desarrollado con **Playwright**, **Cucumber (Gherkin)** y **Page Object Model (POM)**.  
 Los escenarios y código base fueron generados parcialmente con **Comet de Perplexity AI**, demostrando el uso de IA para crear pruebas automatizadas completas desde cero.
+
+📘 [Descargar Guía de Implementación (PDF)](Guia_de_Implementacion_Playwright_BDD_v1.0.pdf)
 
 ---
 
@@ -108,18 +103,72 @@ playwright-gherkin-demo/
 
 ---
 
-## 💬 Prompt usado en Comet (Perplexity)
+## 💬 Prompt completo usado en Comet (Perplexity)
 
 > **Actúa como un QA tester automatizador experto.**
+>
 > Quiero que pruebes el sitio: [https://automationexercise.com](https://automationexercise.com)
 >
-> Tareas:
-> 1️⃣ Generar casos positivos y negativos (navegación, registro, login).
-> 2️⃣ Crear un informe QA con ID, paso, resultado esperado, obtenido y estado.
-> 3️⃣ Convertir los casos a Gherkin (en español con keywords en inglés).
-> 4️⃣ Generar código reproducible en Playwright con `expect`.
+> **Tareas a realizar:**
 >
-> El código debe ejecutarse con `npx playwright test` y usar formato estándar.
+> 1️⃣ **NAVEGACIÓN Y ACCIONES (casos positivos y negativos)**
+>
+> * Abre la página principal y confirma que cargue correctamente.
+> * Haz clic en el enlace del menú superior “Products” y verifica que se muestre el listado de productos.
+> * Vuelve (o abre) la opción “Signup / Login”.
+> * En la pantalla de “Signup”, intenta registrar un usuario nuevo con datos de prueba válidos (nombre y email aleatorio).
+> * Luego intenta registrar otro usuario usando **un email repetido o inválido** (por ejemplo “test@” o uno ya registrado) y observa si se muestra un mensaje de error.
+> * En el formulario de login, prueba iniciar sesión con credenciales incorrectas y revisa si se muestra el mensaje de error correspondiente.
+> * Si la navegación o las acciones fallan, detalla lo que ocurrió.
+>
+> 2️⃣ **CONSTRUYE UN INFORME QA (en español)**
+> Para cada caso probado, genera un informe con los siguientes campos:
+>
+> * ID del caso
+> * Paso
+> * Resultado esperado
+> * Resultado obtenido (según lo que tú hayas visto durante las pruebas)
+> * Estado (PASS / FAIL)
+>
+> Incluye al menos estos casos:
+>
+> * TC-AE-001: Cargar home correctamente
+> * TC-AE-002: Navegar a Products y verificar listado
+> * TC-AE-003: Acceder a Signup / Login
+> * TC-AE-004: Registrar nuevo usuario con datos válidos
+> * TC-AE-005: Intentar registrar usuario con email repetido o inválido (negativo)
+> * TC-AE-006: Intentar iniciar sesión con credenciales incorrectas (negativo)
+>
+> 3️⃣ **GENERA LOS MISMOS CASOS EN GHERKIN**
+> Convierte los casos anteriores a escenarios Gherkin en español, usando las palabras reservadas:
+>
+> * Given / When / Then / And / Feature
+> * Usa títulos descriptivos y separa los escenarios con saltos de línea para que pueda copiarse directamente al archivo `.feature`.
+>
+> 4️⃣ **GENERA CÓDIGO REPRODUCIBLE EN PLAYWRIGHT**
+> Crea un script de Playwright en JavaScript que:
+>
+> * Abra [https://automationexercise.com](https://automationexercise.com)
+> * Valide que la página cargue correctamente
+> * Navegue a Products
+> * Vaya a Signup / Login
+> * Intente registrar un usuario nuevo con email aleatorio (caso positivo)
+> * Intente registrar un usuario con email inválido o repetido (caso negativo)
+> * Intente login con credenciales erróneas (caso negativo)
+> * Genere aserciones claras con `expect` para cada paso
+>
+> El código debe ser ejecutable con:
+>
+> ```bash
+> npx playwright test
+> ```
+>
+> Y seguir el formato estándar:
+>
+> ```js
+> import { test, expect } from '@playwright/test';
+> // ...
+> ```
 
 ---
 
@@ -181,6 +230,10 @@ Incluye escenarios básicos de navegación, registro y login.
 **Iranid Pérez**
 QA Engineer | Automatización BDD | IA aplicada a testing
 📧 Contacto: [GitHub @Iranid](https://github.com/Iranid)
+
+---
+
+```
 
 ---
 
