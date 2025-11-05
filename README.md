@@ -226,7 +226,5 @@ QA Engineer | Automatización BDD | IA aplicada a testing
 
 ---
 
+
 ```
-
----
-
